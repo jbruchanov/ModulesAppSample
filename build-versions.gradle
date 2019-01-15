@@ -1,0 +1,4 @@
+ext {
+    daggerLibraryVersion = '2.20'
+    javaInject = '1'
+}

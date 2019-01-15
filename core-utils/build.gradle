@@ -2,7 +2,12 @@ apply plugin: 'java-library'
 
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation "javax.inject:javax.inject:$javaInject"
 }
 
 sourceCompatibility = "7"
 targetCompatibility = "7"
+
+repositories {
+    mavenCentral()
+}
