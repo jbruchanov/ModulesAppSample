@@ -2,8 +2,18 @@ package com.example.login
 
 import android.os.Bundle
 import com.example.coreui.BaseActivity
+import com.example.coreui.di.AndroidInjector
+import com.example.coreui.di.HasComponent
 
-class LoginActivity : BaseActivity() {
+class LoginActivity : BaseActivity(), HasComponent<LoginComponent> {
+
+    private val _component: LoginComponent by lazy {
+        AndroidInjector
+            .componentProvider(this, LoginComponentProvider::class.java)
+            .provideLoginComponent()
+    }
+
+    override val component: LoginComponent get() = _component
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
