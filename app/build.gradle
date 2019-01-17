@@ -29,13 +29,13 @@ dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
 
-    implementation 'androidx.core:core-ktx:1.1.0-alpha03'
+    implementation 'com.android.support:appcompat-v7:28.0.0'
     testImplementation 'junit:junit:4.12'
 
     implementation "com.google.dagger:dagger:${daggerLibraryVersion}"
     kapt "com.google.dagger:dagger-compiler:${daggerLibraryVersion}"
 
-    implementation project(path: ':ui-login')
-    implementation project(path: ':core-ui')
-    implementation project(path: ':core-utils')
+    api project(path: ':ui-login')
+    api project(path: ':core-ui')
+    api project(path: ':core-utils')
 }
