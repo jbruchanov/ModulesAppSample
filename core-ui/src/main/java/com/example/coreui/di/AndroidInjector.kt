@@ -29,5 +29,11 @@ class AndroidInjector {
                 clazz.cast(it.component)
             } ?: throw IllegalStateException("Activity doesn't implement HasComponent<${clazz.canonicalName}>?")
         }
+
+        fun <T : IComponent> component(activity: BaseActivity, clazz: Class<T>): T {
+            return (activity as? HasComponent<*>)?.let {
+                clazz.cast(it.component)
+            } ?: throw IllegalStateException("Activity doesn't implement HasComponent<${clazz.canonicalName}>?")
+        }
     }
 }

@@ -38,9 +38,9 @@ dependencies {
     /*
 looks like it's necessary if we have own HomeModule which needs Dagger factory
 DaggerAppComponent.java:13: error: cannot find symbol
-import com.example.home.HomeModule_ProvideHovnoFactory;
+import com.example.home.HomeModule_ProvideSomeFactory;
 ^
-symbol:   class HomeModule_ProvideHovnoFactory
+symbol:   class HomeModule_ProvideSomeFactory
 location: package com.example.home
 */
     kapt "com.google.dagger:dagger-compiler:${daggerLibraryVersion}"

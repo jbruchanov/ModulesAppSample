@@ -19,6 +19,9 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
     }
+
+
+    dynamicFeatures = [":ui_reg"]
 }
 
 kapt {
@@ -34,6 +37,8 @@ dependencies {
 
     implementation "com.google.dagger:dagger:${daggerLibraryVersion}"
     kapt "com.google.dagger:dagger-compiler:${daggerLibraryVersion}"
+
+    implementation 'com.google.android.play:core:1.3.6'
 
     api project(path: ':ui-login')
     api project(path: ':ui-home')

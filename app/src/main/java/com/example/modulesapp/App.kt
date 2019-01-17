@@ -1,6 +1,5 @@
 package com.example.modulesapp
 
-import android.app.Application
 import com.example.core.Logger
 import com.example.coreui.BaseActivity
 import com.example.coreui.di.IBaseActivityComponentProvider
@@ -8,9 +7,10 @@ import com.example.modulesapp.di.AppModule
 import com.example.modulesapp.di.BaseActivityComponent
 import com.example.modulesapp.di.BaseActivityModule
 import com.example.modulesapp.di.DaggerAppComponent
+import com.google.android.play.core.splitcompat.SplitCompatApplication
 import javax.inject.Inject
 
-class App : Application(), IBaseActivityComponentProvider {
+class App : SplitCompatApplication(), IBaseActivityComponentProvider {
 
     override fun provideBaseActivityComponent(baseActivity: BaseActivity): BaseActivityComponent {
         return sessionComponent.baseActivityComponent(BaseActivityModule(baseActivity))

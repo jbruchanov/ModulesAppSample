@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">ModulesApp</string>
+    <string name="title_uireg">Registration</string>
 </resources>

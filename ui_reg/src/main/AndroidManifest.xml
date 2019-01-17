@@ -1,0 +1,15 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+          xmlns:dist="http://schemas.android.com/apk/distribution"
+          package="com.example.reg">
+    <dist:module
+            dist:onDemand="true"
+            dist:instant="false"
+            dist:title="@string/title_uireg">
+        <dist:fusing dist:include="true"/>
+    </dist:module>
+
+    <application>
+        <activity android:name=".RegistrationActivity" />
+    </application>
+</manifest>
+
