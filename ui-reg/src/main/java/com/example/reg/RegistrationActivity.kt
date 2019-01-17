@@ -4,7 +4,7 @@ import android.os.Bundle
 import com.example.coreui.BaseActivity
 import com.example.coreui.di.AndroidInjector
 import com.example.coreui.di.HasComponent
-import com.example.login.R
+import javax.inject.Inject
 
 class RegistrationActivity : BaseActivity(), HasComponent<RegistrationComponent> {
 
@@ -15,6 +15,7 @@ class RegistrationActivity : BaseActivity(), HasComponent<RegistrationComponent>
     }
 
     override val component: RegistrationComponent get() = _component
+    @Inject
     lateinit var navigation: RegistrationNavigation
 
     override fun onCreate(savedInstanceState: Bundle?) {

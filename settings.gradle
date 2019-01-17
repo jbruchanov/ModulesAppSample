@@ -1,1 +1,1 @@
-include ':app', ':core-ui', ':core-utils', ':ui-login', ':ui-home', ':ui-home-settings', ':ui_reg'
+include ':app', ':core-ui', ':core-utils', ':ui-login', ':ui-home', ':ui-home-settings', ':ui-reg'

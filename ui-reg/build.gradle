@@ -1,11 +1,11 @@
-apply plugin: 'com.android.dynamic-feature'
-apply plugin: 'kotlin-android'
+apply plugin: 'com.android.library'
 apply plugin: 'kotlin-android-extensions'
+apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-kapt'
 
 android {
     compileSdkVersion 28
-    
+
 
 
     defaultConfig {
@@ -13,7 +13,18 @@ android {
         targetSdkVersion 28
         versionCode 1
         versionName "1.0"
+
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+
     }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+
 }
 
 dependencies {
@@ -25,10 +36,13 @@ dependencies {
     implementation 'com.android.support:appcompat-v7:28.0.0'
     implementation "javax.inject:javax.inject:$javaInject"
     implementation "com.google.dagger:dagger:${daggerLibraryVersion}"
+
     kapt "com.google.dagger:dagger-compiler:${daggerLibraryVersion}"
 
     api project(path: ':core-utils')
     api project(path: ':core-ui')
+}
 
-    implementation project(':app')
+repositories {
+    mavenCentral()
 }

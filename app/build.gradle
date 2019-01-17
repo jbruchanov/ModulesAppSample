@@ -19,9 +19,6 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
     }
-
-
-    dynamicFeatures = [":ui_reg"]
 }
 
 kapt {
@@ -43,6 +40,7 @@ dependencies {
     api project(path: ':ui-login')
     api project(path: ':ui-home')
     api project(path: ':ui-home-settings')
+    api project(path: ':ui-reg')
     api project(path: ':core-ui')
     api project(path: ':core-utils')
 }

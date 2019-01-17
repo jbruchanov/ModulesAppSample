@@ -4,8 +4,9 @@ import android.os.Bundle
 import com.example.coreui.BasePresentationFragment
 import com.example.coreui.BasePresenter
 import com.example.coreui.di.AndroidInjector
+import javax.inject.Inject
 
-class RegistrationFragment : BasePresentationFragment<RegistrationPresenter>() {
+class RegistrationFragment @Inject constructor() : BasePresentationFragment<RegistrationPresenter>() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         AndroidInjector
@@ -14,4 +15,4 @@ class RegistrationFragment : BasePresentationFragment<RegistrationPresenter>() {
     }
 }
 
-class RegistrationPresenter : BasePresenter()
+class RegistrationPresenter @Inject constructor() : BasePresenter()
