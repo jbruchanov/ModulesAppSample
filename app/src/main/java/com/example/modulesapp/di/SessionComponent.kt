@@ -1,7 +1,7 @@
 package com.example.modulesapp.di
 
+import com.example.core.scopes.SessionScope
 import com.example.coreui.di.IComponent
-import com.example.coreui.di.SessionScope
 import dagger.Subcomponent
 
 @Subcomponent

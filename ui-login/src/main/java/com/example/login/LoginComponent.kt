@@ -1,12 +1,12 @@
 package com.example.login
 
-import com.example.coreui.di.ActivityScope
+import com.example.core.scopes.ActivityScope
 import com.example.coreui.di.IComponent
 import com.example.coreui.di.IComponentProvider
 import dagger.Subcomponent
 
 interface LoginComponentProvider : IComponentProvider {
-    fun provideLoginComponent(): LoginComponent
+    fun loginComponent(): LoginComponent
 }
 
 @ActivityScope

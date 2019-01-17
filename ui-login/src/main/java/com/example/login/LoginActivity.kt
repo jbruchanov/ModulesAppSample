@@ -10,7 +10,7 @@ class LoginActivity : BaseActivity(), HasComponent<LoginComponent> {
     private val _component: LoginComponent by lazy {
         AndroidInjector
             .componentProvider(this, LoginComponentProvider::class.java)
-            .provideLoginComponent()
+            .loginComponent()
     }
 
     override val component: LoginComponent get() = _component

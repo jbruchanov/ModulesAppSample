@@ -36,6 +36,8 @@ dependencies {
     kapt "com.google.dagger:dagger-compiler:${daggerLibraryVersion}"
 
     api project(path: ':ui-login')
+    api project(path: ':ui-home')
+    api project(path: ':ui-home-settings')
     api project(path: ':core-ui')
     api project(path: ':core-utils')
 }
