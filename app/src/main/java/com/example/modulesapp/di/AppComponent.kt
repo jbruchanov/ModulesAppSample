@@ -7,6 +7,7 @@ import com.example.coreui.di.AppScope
 import com.example.coreui.utils.AndroidLogger
 import com.example.coreui.utils.AndroidResHelper
 import com.example.coreui.utils.ResHelper
+import com.example.login.LoginNavigation
 import com.example.modulesapp.App
 import dagger.Binds
 import dagger.Component
@@ -18,7 +19,7 @@ import dagger.Provides
 interface AppComponent {
     fun inject(app: App)
 
-    fun sessionCompomonent(): SessionComponent
+    fun sessionComponent(): SessionComponent
 }
 
 

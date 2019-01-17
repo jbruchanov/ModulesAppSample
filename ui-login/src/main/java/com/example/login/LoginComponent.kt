@@ -9,7 +9,6 @@ interface LoginComponentProvider : IComponentProvider {
     fun provideLoginComponent(): LoginComponent
 }
 
-
 @ActivityScope
 @Subcomponent
 interface LoginComponent : IComponent {

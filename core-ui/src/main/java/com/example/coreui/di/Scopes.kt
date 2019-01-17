@@ -12,4 +12,8 @@ annotation class SessionScope
 
 @Scope
 @Retention(AnnotationRetention.RUNTIME)
+annotation class BaseActivityScope
+
+@Scope
+@Retention(AnnotationRetention.RUNTIME)
 annotation class ActivityScope

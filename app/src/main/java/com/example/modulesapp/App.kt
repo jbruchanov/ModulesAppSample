@@ -2,13 +2,16 @@ package com.example.modulesapp
 
 import android.app.Application
 import com.example.core.Logger
-import com.example.coreui.di.HasComponent
-import com.example.modulesapp.di.AppModule
-import com.example.modulesapp.di.DaggerAppComponent
-import com.example.modulesapp.di.SessionComponent
+import com.example.coreui.BaseActivity
+import com.example.coreui.di.IBaseActivityComponentProvider
+import com.example.modulesapp.di.*
 import javax.inject.Inject
 
-class App : Application(), HasComponent<SessionComponent> {
+class App : Application(), IBaseActivityComponentProvider {
+
+    override fun provideBaseActivityComponent(baseActivity: BaseActivity): BaseActivityComponent {
+        return sessionComponent.baseActivityComponent(BaseActivityModule(baseActivity))
+    }
 
     @Inject
     internal lateinit var logger: Logger
@@ -20,8 +23,7 @@ class App : Application(), HasComponent<SessionComponent> {
             .build()
     }
 
-    private val _sessionComponent by lazy { appComponent.sessionCompomonent() }
-    override val component: SessionComponent get() = _sessionComponent
+    private val sessionComponent by lazy { appComponent.sessionComponent() }
 
     override fun onCreate() {
         super.onCreate()
