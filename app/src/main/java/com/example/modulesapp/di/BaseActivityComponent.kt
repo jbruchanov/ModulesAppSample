@@ -4,7 +4,6 @@ import com.example.core.scopes.BaseActivityScope
 import com.example.coreui.BaseActivity
 import com.example.coreui.di.IComponent
 import com.example.home.HomeComponentProvider
-import com.example.homesettings.SettingsComponentProvider
 import com.example.login.LoginComponentProvider
 import com.example.login.LoginNavigation
 import dagger.Binds

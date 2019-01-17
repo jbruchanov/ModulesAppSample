@@ -2,12 +2,11 @@ package com.example.modulesapp.di
 
 import android.app.Application
 import android.content.Context
-import com.example.core.scopes.AppScope
 import com.example.core.Logger
+import com.example.core.scopes.AppScope
 import com.example.coreui.utils.AndroidLogger
 import com.example.coreui.utils.AndroidResHelper
 import com.example.coreui.utils.ResHelper
-import com.example.login.LoginNavigation
 import com.example.modulesapp.App
 import dagger.Binds
 import dagger.Component

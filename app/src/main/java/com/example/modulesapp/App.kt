@@ -4,7 +4,10 @@ import android.app.Application
 import com.example.core.Logger
 import com.example.coreui.BaseActivity
 import com.example.coreui.di.IBaseActivityComponentProvider
-import com.example.modulesapp.di.*
+import com.example.modulesapp.di.AppModule
+import com.example.modulesapp.di.BaseActivityComponent
+import com.example.modulesapp.di.BaseActivityModule
+import com.example.modulesapp.di.DaggerAppComponent
 import javax.inject.Inject
 
 class App : Application(), IBaseActivityComponentProvider {
