@@ -21,6 +21,7 @@ class DynamicFeatureActivity : BaseActivity(), HasComponent<DynamicFeatureCompon
         DaggerDynamicFeatureComponent
             .builder()
             .dynamicFeatureDependencies(dynamicFeatureDependencies)
+            .dynamicFeatureModule(DynamicFeatureModule(this))
             .build()
     }
 
