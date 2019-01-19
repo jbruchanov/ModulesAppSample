@@ -43,7 +43,7 @@ import com.example.home.HomeModule_ProvideSomeFactory;
 symbol:   class HomeModule_ProvideSomeFactory
 location: package com.example.home
 */
-    kapt "com.google.dagger:dagger-compiler:${daggerLibraryVersion}"
+//    kapt "com.google.dagger:dagger-compiler:${daggerLibraryVersion}"
     api project(path: ':core-utils')
     api project(path: ':core-ui')
     api project(path: ':ui-home-settings')

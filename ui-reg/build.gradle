@@ -37,7 +37,7 @@ dependencies {
     implementation "javax.inject:javax.inject:$javaInject"
     implementation "com.google.dagger:dagger:${daggerLibraryVersion}"
 
-    kapt "com.google.dagger:dagger-compiler:${daggerLibraryVersion}"
+//    kapt "com.google.dagger:dagger-compiler:${daggerLibraryVersion}"
 
     api project(path: ':core-utils')
     api project(path: ':core-ui')
