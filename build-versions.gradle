@@ -1,5 +1,5 @@
 ext {
-    daggerLibraryVersion = '2.20'
+    daggerLibraryVersion = '2.21'
     javaInject = '1'
     coreKtx = "1.0.1"
 }
