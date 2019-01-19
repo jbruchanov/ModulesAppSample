@@ -19,6 +19,11 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
     }
+
+
+    dynamicFeatures = [":ui_dynamic_feature"]
+
+
 }
 
 kapt {
@@ -30,6 +35,7 @@ dependencies {
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
 
     implementation 'com.android.support:appcompat-v7:28.0.0'
+    implementation 'com.google.android.play:core:1.3.6'
     testImplementation 'junit:junit:4.12'
 
     implementation "com.google.dagger:dagger:${daggerLibraryVersion}"
@@ -40,4 +46,5 @@ dependencies {
     api project(path: ':ui-home-settings')
     api project(path: ':core-ui')
     api project(path: ':core-utils')
+    api project(path: ':ui_dynamic_feature_deps')
 }

@@ -1,0 +1,43 @@
+apply plugin: 'com.android.dynamic-feature'
+apply plugin: 'kotlin-android-extensions'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-kapt'
+
+
+android {
+    compileSdkVersion 28
+    
+
+
+    defaultConfig {
+        minSdkVersion 15
+        targetSdkVersion 28
+        versionCode 1
+        versionName "1.0"
+
+
+    }
+
+
+}
+
+kapt {
+    generateStubs = true
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation project(':app')
+
+    implementation 'com.android.support:appcompat-v7:28.0.0'
+    implementation "com.google.dagger:dagger:${daggerLibraryVersion}"
+    kapt "com.google.dagger:dagger-compiler:${daggerLibraryVersion}"
+
+    implementation project(path: ':core-utils')
+    implementation project(path: ':core-ui')
+    implementation project(path: ':ui_dynamic_feature_deps')
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+}
+repositories {
+    mavenCentral()
+}
