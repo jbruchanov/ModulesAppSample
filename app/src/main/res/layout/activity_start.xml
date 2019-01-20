@@ -10,6 +10,12 @@
             android:text="@string/login"/>
 
     <Button
+            android:id="@+id/register"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/register"/>
+
+    <Button
             android:id="@+id/dynamic_feature"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"

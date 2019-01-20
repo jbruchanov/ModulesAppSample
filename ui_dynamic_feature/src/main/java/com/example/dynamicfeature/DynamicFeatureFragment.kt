@@ -1,6 +1,5 @@
 package com.example.dynamicfeature
 
-import android.content.Context
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -14,11 +13,11 @@ import javax.inject.Inject
 class DynamicFeatureFragment : BasePresentationFragment<DynamicFeaturePresenter>() {
 
     @Inject
+    override lateinit var presenter: DynamicFeaturePresenter
+    @Inject
     lateinit var core: SecurityCore
 
-    override fun onAttach(context: Context?) {
-        super.onAttach(context)
-
+    override fun inject() {
         AndroidInjector
             .component(this, DynamicFeatureComponent::class.java)
             .inject(this)

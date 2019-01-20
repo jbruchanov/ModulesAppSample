@@ -1,4 +1,4 @@
-package com.example.ui_dynamic_feature_deps;
+package com.example.dynamicfeature;
 
 import com.example.core.Logger;
 import com.example.core.SecurityCore;

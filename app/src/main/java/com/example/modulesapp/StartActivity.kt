@@ -5,6 +5,7 @@ import android.os.Bundle
 import android.widget.Toast
 import com.example.coreui.BaseActivity
 import com.example.login.LoginActivity
+import com.example.reg.RegistrationActivity
 import com.google.android.play.core.splitinstall.SplitInstallManagerFactory
 import com.google.android.play.core.splitinstall.SplitInstallRequest
 import kotlinx.android.synthetic.main.activity_start.*
@@ -18,7 +19,10 @@ class StartActivity : BaseActivity() {
 
         login.setOnClickListener {
             startActivity(Intent(this, LoginActivity::class.java))
-            finish()
+        }
+
+        register.setOnClickListener {
+            startActivity(Intent(this, RegistrationActivity::class.java))
         }
 
         dynamic_feature.setOnClickListener {

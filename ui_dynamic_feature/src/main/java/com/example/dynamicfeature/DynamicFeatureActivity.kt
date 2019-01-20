@@ -7,7 +7,6 @@ import com.example.coreui.BaseActivity
 import com.example.coreui.di.HasComponent
 import com.example.coreui.di.IBaseActivityComponentProvider
 import com.example.home.R
-import com.example.ui_dynamic_feature_deps.DynamicFeatureDependencies
 import javax.inject.Inject
 
 class DynamicFeatureActivity : BaseActivity(), HasComponent<DynamicFeatureComponent> {

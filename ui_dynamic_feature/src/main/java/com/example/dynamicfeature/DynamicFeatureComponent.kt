@@ -2,7 +2,6 @@ package com.example.dynamicfeature
 
 import com.example.core.scopes.AppScope
 import com.example.coreui.di.IComponent
-import com.example.ui_dynamic_feature_deps.DynamicFeatureDependencies
 import dagger.Component
 import dagger.Module
 import dagger.Provides

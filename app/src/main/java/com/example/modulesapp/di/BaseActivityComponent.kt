@@ -7,7 +7,7 @@ import com.example.home.HomeComponentProvider
 import com.example.login.LoginComponentProvider
 import com.example.login.LoginNavigation
 import com.example.reg.RegistrationComponentProvider
-import com.example.ui_dynamic_feature_deps.DynamicFeatureDependencies
+import com.example.dynamicfeature.DynamicFeatureDependencies
 import dagger.Binds
 import dagger.Module
 import dagger.Provides
