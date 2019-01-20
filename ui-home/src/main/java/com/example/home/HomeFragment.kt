@@ -13,10 +13,12 @@ import javax.inject.Inject
 class HomeFragment : BasePresentationFragment<HomePresenter>() {
 
     @Inject
+    override lateinit var presenter: HomePresenter
+
+    @Inject
     lateinit var core: SecurityCore
 
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
+    override fun inject() {
         AndroidInjector
             .component(this, HomeComponent::class.java)
             .inject(this)

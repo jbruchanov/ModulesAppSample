@@ -25,6 +25,10 @@ kapt {
     generateStubs = true
 }
 
+configurations {
+    compile.exclude group: 'com.example.coreui', module: 'ui-reg'
+}
+
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
@@ -34,6 +38,10 @@ dependencies {
 
     implementation "com.google.dagger:dagger:${daggerLibraryVersion}"
     kapt "com.google.dagger:dagger-compiler:${daggerLibraryVersion}"
+
+//    implementation "com.google.dagger:dagger-android:${daggerLibraryVersion}"
+//    implementation "com.google.dagger:dagger-android-support:${daggerLibraryVersion}"
+//    kapt "com.google.dagger:dagger-android-processor:${daggerLibraryVersion}"
 
     implementation 'com.google.android.play:core:1.3.6'
 

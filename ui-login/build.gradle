@@ -38,7 +38,7 @@ dependencies {
     implementation "com.google.dagger:dagger:${daggerLibraryVersion}"
 
     //can't be used here
-    //kapt "com.google.dagger:dagger-compiler:${daggerLibraryVersion}"
+//    kapt "com.google.dagger:dagger-compiler:${daggerLibraryVersion}"
 
     api project(path: ':core-utils')
     api project(path: ':core-ui')

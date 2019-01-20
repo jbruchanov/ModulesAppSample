@@ -6,10 +6,20 @@ import android.view.View
 import android.view.ViewGroup
 import com.example.coreui.BasePresentationFragment
 import com.example.coreui.BasePresenter
+import com.example.coreui.di.AndroidInjector
 import kotlinx.android.synthetic.main.fragment_welcome.*
 import javax.inject.Inject
 
 class WelcomeFragment : BasePresentationFragment<WelcomePresenter>() {
+
+    @Inject
+    override lateinit var presenter: WelcomePresenter
+
+    override fun inject() {
+        AndroidInjector
+            .component(this, RegistrationComponent::class.java)
+            .inject(this)
+    }
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         return inflater.inflate(R.layout.fragment_welcome, container, false)
@@ -21,7 +31,7 @@ class WelcomeFragment : BasePresentationFragment<WelcomePresenter>() {
     }
 }
 
-class WelcomePresenter : BasePresenter() {
+class WelcomePresenter @Inject constructor() : BasePresenter() {
 
     @Inject
     lateinit var navigation: RegistrationNavigation

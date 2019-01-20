@@ -12,6 +12,7 @@ import dagger.Subcomponent
 interface RegistrationComponent : IComponent {
     fun inject(activity: RegistrationActivity)
     fun inject(fragment: RegistrationFragment)
+    fun inject(welcomeFragment: WelcomeFragment)
 }
 
 

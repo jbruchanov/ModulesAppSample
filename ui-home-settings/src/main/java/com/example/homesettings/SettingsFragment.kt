@@ -13,10 +13,12 @@ import javax.inject.Inject
 class SettingsFragment : BasePresentationFragment<SettingsPresenter>() {
 
     @Inject
+    override lateinit var presenter: SettingsPresenter
+
+    @Inject
     lateinit var logger: Logger
 
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
+    override fun inject() {
         AndroidInjector
             .component(this, SettingsComponent::class.java)
             .inject(this)
