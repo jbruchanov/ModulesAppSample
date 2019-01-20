@@ -15,8 +15,10 @@ interface IComponentProvider
 interface IComponent
 
 
+
 class AndroidInjector {
     companion object {
+        @JvmStatic
         fun <T : IComponentProvider> componentProvider(activity: BaseActivity, clazz: Class<T>): T {
             return (activity.application as? IBaseActivityComponentProvider)?.let { provider ->
                 //return BaseActivityComponent which is actual provider for feature module components
@@ -24,12 +26,14 @@ class AndroidInjector {
             } ?: throw IllegalStateException("Application doesn't implement IBaseActivityComponentProvider")
         }
 
+        @JvmStatic
         fun <T : IComponent> component(fragment: BaseFragment, clazz: Class<T>): T {
             return (fragment.activity as? HasComponent<*>)?.let {
                 clazz.cast(it.component)
             } ?: throw IllegalStateException("Activity doesn't implement HasComponent<${clazz.canonicalName}>?")
         }
 
+        @JvmStatic
         fun <T : IComponent> component(activity: BaseActivity, clazz: Class<T>): T {
             return (activity as? HasComponent<*>)?.let {
                 clazz.cast(it.component)

@@ -13,6 +13,7 @@ interface RegistrationComponent : IComponent {
     fun inject(activity: RegistrationActivity)
     fun inject(fragment: RegistrationFragment)
     fun inject(welcomeFragment: WelcomeFragment)
+    fun inject(regJavaFragment: RegJavaFragment)
 }
 
 

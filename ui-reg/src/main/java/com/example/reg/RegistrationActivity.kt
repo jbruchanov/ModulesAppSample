@@ -27,7 +27,7 @@ class RegistrationActivity : BaseActivity(), HasComponent<RegistrationComponent>
 
         supportFragmentManager.apply {
             if (findFragmentById(R.id.fragment_container) == null) {
-                navigation.navigateToWelcome()
+                navigation.navigateToJavaFragment()
             }
         }
     }
