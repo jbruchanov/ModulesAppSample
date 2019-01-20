@@ -1,4 +1,6 @@
 <resources>
     <string name="app_name">ModulesApp</string>
     <string name="title_uireg">Registration</string>
+    <string name="title_ui_dynamic_feature">Module Title</string>
+    <string name="dynamic_feature">Dynamic Feature</string>
 </resources>
